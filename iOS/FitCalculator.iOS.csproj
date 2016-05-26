@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{C6DB1189-4B6B-4739-893C-F1F38E78B0D9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>FitCalculator.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>FitCalculator.iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchFastDev>true</MtouchFastDev>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchFloat32>true</MtouchFloat32>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchFloat32>true</MtouchFloat32>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchDebug>true</MtouchDebug>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FitCalculator\FitCalculator.csproj">
+      <Project>{83B74E41-2520-46F3-8523-EC7AE9A46A44}</Project>
+      <Name>FitCalculator</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Artwork.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Artwork.imageset\iTunesArtwork.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Artwork.imageset\iTunesArtwork%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Signal.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Percent.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Question.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Bars.imageset\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+    <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Source\AppDelegate.cs" />
+    <Compile Include="Source\Main.cs" />
+    <Compile Include="Source\NavigationController.cs" />
+    <Compile Include="Source\TabBarController.cs" />
+    <Compile Include="Source\Max Weight\MaxWeightViewController.cs" />
+    <Compile Include="Source\Max Weight\MaxWeightViewController.designer.cs">
+      <DependentUpon>MaxWeightViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Max Weight\MaxWeightTableViewDataSource.cs" />
+    <Compile Include="Source\Max Weight\MaxWeightTableViewDelegate.cs" />
+    <Compile Include="Source\Percentage\PercentageViewController.cs" />
+    <Compile Include="Source\Percentage\PercentageViewController.designer.cs">
+      <DependentUpon>PercentageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Max Weight\Exercise Picker\MaxWeightExercisePickerNavigationController.cs" />
+    <Compile Include="Source\Max Weight\Exercise Picker\MaxWeightExercisePickerViewController.cs" />
+    <Compile Include="Source\Max Weight\Exercise Picker\MaxWeightExercisePickerViewController.designer.cs">
+      <DependentUpon>MaxWeightExercisePickerViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Max Weight\Editor\MaxWeightEditorNavigationController.cs" />
+    <Compile Include="Source\Max Weight\Editor\MaxWeightEditorViewController.cs" />
+    <Compile Include="Source\Max Weight\Editor\MaxWeightEditorViewController.designer.cs">
+      <DependentUpon>MaxWeightEditorViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Percentage\Editor\PercentageEditorNavigationController.cs" />
+    <Compile Include="Source\Percentage\Editor\PercentageEditorViewController.cs" />
+    <Compile Include="Source\Percentage\Editor\PercentageEditorViewController.designer.cs">
+      <DependentUpon>PercentageEditorViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Percentage\Exercise Picker\PercentageExercisePickerNavigationController.cs" />
+    <Compile Include="Source\Percentage\Exercise Picker\PercentageExercisePickerViewController.cs" />
+    <Compile Include="Source\Percentage\Exercise Picker\PercentageExercisePickerViewController.designer.cs">
+      <DependentUpon>PercentageExercisePickerViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Max Weight\Cells\MaxWeightCell.cs" />
+    <Compile Include="Source\Max Weight\Cells\MaxWeightCell.designer.cs">
+      <DependentUpon>MaxWeightCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Percentage\Cells\PercentageCell.cs" />
+    <Compile Include="Source\Percentage\Cells\PercentageCell.designer.cs">
+      <DependentUpon>PercentageCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Storage\FileStorage.cs" />
+    <Compile Include="Source\FloatTextFieldDelegate.cs" />
+    <Compile Include="Source\Validator.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="Resources\Images.xcassets\Contents.json" />
+    <BundleResource Include="Resources\.DS_Store" />
+    <BundleResource Include="Resources\Images.xcassets\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Source\" />
+    <Folder Include="Source\Max Weight\" />
+    <Folder Include="Source\Percentage\" />
+    <Folder Include="Resources\Images.xcassets\Artwork.imageset\" />
+    <Folder Include="Source\Max Weight\Exercise Picker\" />
+    <Folder Include="Source\Max Weight\Editor\" />
+    <Folder Include="Source\Percentage\Editor\" />
+    <Folder Include="Source\Percentage\Exercise Picker\" />
+    <Folder Include="Resources\Images.xcassets\Signal.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Percent.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Question.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Bars.imageset\" />
+    <Folder Include="Source\Max Weight\Cells\" />
+    <Folder Include="Source\Percentage\Cells\" />
+    <Folder Include="Source\Storage\" />
+    <Folder Include="Source\About\" />
+  </ItemGroup>
+</Project>
