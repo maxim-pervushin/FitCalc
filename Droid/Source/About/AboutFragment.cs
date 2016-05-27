@@ -18,7 +18,7 @@ namespace FitCalculator.Droid
 
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
-			View view = inflater.Inflate (Resource.Layout.settings_fragment, container, false);
+			View view = inflater.Inflate (Resource.Layout.about_fragment, container, false);
 			return view;
 		}
 	}
