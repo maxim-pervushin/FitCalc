@@ -65,8 +65,8 @@ namespace FitCalculator.iOS
 		private void ReloadData ()
 		{
 			var exerciseDescription = PercentageCalculator.ExerciseDescription (calculator.Exercise);
-			ExerciseButton.SetTitle (" " + exerciseDescription, UIControlState.Normal);
-			ExerciseButton.SetTitle (" " + exerciseDescription, UIControlState.Selected);
+			ExerciseButton.SetTitle (exerciseDescription, UIControlState.Normal);
+			ExerciseButton.SetTitle (exerciseDescription, UIControlState.Selected);
 			TableView.ReloadData ();
 		}
 	}

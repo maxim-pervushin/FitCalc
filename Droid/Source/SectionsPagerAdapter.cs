@@ -18,7 +18,7 @@ namespace FitCalculator.Droid
 			case 1:
 				return new PercentageFragment ();
 			case 2:
-				return new SettingsFragment ();
+				return new AboutFragment ();
 			}
 			return null;
 
@@ -38,7 +38,7 @@ namespace FitCalculator.Droid
 			case 1:
 				return new Java.Lang.String ("Percentage");
 			case 2:
-				return new Java.Lang.String ("Settings");
+				return new Java.Lang.String ("About");
 			}
 			return null;
 		}

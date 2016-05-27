@@ -72,7 +72,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\MainActivity.cs" />
     <Compile Include="Source\SectionsPagerAdapter.cs" />
-    <Compile Include="Source\SettingsFragment.cs" />
     <Compile Include="Source\Max Weight\MaxWeightDataAdapter.cs" />
     <Compile Include="Source\Max Weight\MaxWeightExerciseAdapter.cs" />
     <Compile Include="Source\Max Weight\MaxWeightFragment.cs" />
@@ -80,6 +79,7 @@
     <Compile Include="Source\Percentage\PercentageFragment.cs" />
     <Compile Include="Source\Percentage\PercentageExerciseAdapter.cs" />
     <Compile Include="Source\Storage\FileStorage.cs" />
+    <Compile Include="Source\About\AboutFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -120,5 +120,6 @@
     <Folder Include="Source\Max Weight\" />
     <Folder Include="Source\Percentage\" />
     <Folder Include="Source\Storage\" />
+    <Folder Include="Source\About\" />
   </ItemGroup>
 </Project>

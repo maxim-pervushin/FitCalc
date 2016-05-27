@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization.Json;
 using System.IO;
-using System.IO;
 
 namespace FitCalculator
 {
@@ -33,12 +32,6 @@ namespace FitCalculator
 				var reader = new StreamReader (stream);
 				storage.WriteFile (JsonDataManager.MaxWeightFileName, reader.ReadToEnd ());
 			}
-
-//			System.Diagnostics.Debug.WriteLine ("------------------------- Max Weight");
-//			foreach (KeyValuePair<string, MaxWeightData> pair in maxWeightStorage) {
-//				System.Diagnostics.Debug.WriteLine (string.Format ("{0}: {1}", pair.Key, pair.Value.ToString ()));
-//			}
-//			System.Diagnostics.Debug.WriteLine ("------------------------- Max Weight");
 		}
 
 		public MaxWeightData LoadMaxWeightData (string exerciseCategory, MaxWeightData defaultData)
@@ -74,12 +67,6 @@ namespace FitCalculator
 				StreamReader reader = new StreamReader (stream);
 				storage.WriteFile (JsonDataManager.PercentageFileName, reader.ReadToEnd ());
 			}
-
-//			System.Diagnostics.Debug.WriteLine ("------------------------- Percentage");
-//			foreach (KeyValuePair<string, PercentageData> pair in percentageStorage) {
-//				System.Diagnostics.Debug.WriteLine (string.Format ("{0}: {1}", pair.Key, pair.Value.ToString ()));
-//			}
-//			System.Diagnostics.Debug.WriteLine ("------------------------- Percentage");
 		}
 
 		public PercentageData LoadPercentageData (string exerciseCategory, PercentageData defaultData)

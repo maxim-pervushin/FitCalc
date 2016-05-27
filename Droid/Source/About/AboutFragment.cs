@@ -9,7 +9,7 @@ using System;
 
 namespace FitCalculator.Droid
 {
-	public class SettingsFragment : Fragment
+	public class AboutFragment : Fragment
 	{
 		public override void OnCreate (Bundle savedInstanceState)
 		{

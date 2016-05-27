@@ -52,8 +52,8 @@ namespace FitCalculator.iOS
 		private void ReloadData ()
 		{
 			var exerciseDescription = MaxWeightCalculator.ExerciseDescription (dataSource.Calculator.Exercise);
-			CategoryButton.SetTitle (" " + exerciseDescription, UIControlState.Normal);
-			CategoryButton.SetTitle (" " + exerciseDescription, UIControlState.Selected);
+			CategoryButton.SetTitle (exerciseDescription, UIControlState.Normal);
+			CategoryButton.SetTitle (exerciseDescription, UIControlState.Selected);
 			TableView.ReloadData ();
 		}
 	}
