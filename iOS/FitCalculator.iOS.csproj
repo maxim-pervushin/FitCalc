@@ -148,6 +148,10 @@
     <Compile Include="Source\Storage\FileStorage.cs" />
     <Compile Include="Source\FloatTextFieldDelegate.cs" />
     <Compile Include="Source\Validator.cs" />
+    <Compile Include="Source\About\AboutViewController.cs" />
+    <Compile Include="Source\About\AboutViewController.designer.cs">
+      <DependentUpon>AboutViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
