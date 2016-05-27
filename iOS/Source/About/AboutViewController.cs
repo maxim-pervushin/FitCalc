@@ -8,9 +8,6 @@ namespace FitCalculator.iOS
 	{
 		public AboutViewController (IntPtr handle) : base (handle)
 		{
-			// @{UITextAttributeTextColor: [UIColor whiteColor]}
-
-//			UINavigationItem.Appearance.SetTitleTextAttributes ();
 		}
 	}
 }
